@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main(){
+   int x,y,w,h;
+   int a,b,c,d;
+   int s1,s2;
+   scanf("%d %d %d %d",&x,&y,&w,&h);
+   a=h-y;
+   b=x;
+   c=y;
+   d=w-x;
+   if(a>b){
+      s1=b;
+   }
+   else {
+      s1=a;
+   }
+   if(c>d){
+      s2=d;
+   }
+   else{
+      s2=c;
+   }
+   if(s1>s2){
+      printf("%d",s2);
+   }
+   else{
+      printf("%d",s1);
+   }
+
+}
