@@ -1,0 +1,16 @@
+b1=int(input())
+b2=int(input())
+b3=int(input())
+c1=int(input())
+c2=int(input())
+a=[]
+a.append(b1)
+a.append(b2)
+a.append(b3)
+minb=min(a)
+if c1<=c2:
+    minc=c1
+else:
+    minc=c2
+sum=minb+minc-50
+print(sum)
