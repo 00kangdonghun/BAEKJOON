@@ -1,0 +1,11 @@
+n=int(input())
+N=n
+cnt=0
+while True:
+    sum=n//10+n%10
+    m=n%10*10+sum%10
+    cnt=cnt+1
+    n=m
+    if N==m:
+        break
+print(cnt)
