@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+   int N;
+   double arr[1000],M=0,avg=0;
+   scanf("%d",&N);
+   for(int i=0;i<N;i++){
+      scanf("%lf",&arr[i]);
+      if(M<arr[i]){
+         M=arr[i];
+      }
+   }
+   for(int i=0;i<N;i++){
+      arr[i]=arr[i]/M*100;
+      avg+=arr[i];
+   }
+   printf("%lf",avg/(double)N);
+
+   return 0;
+}
