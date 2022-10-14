@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+int d(int n){
+   int sum=n;
+   while(n){
+      sum+=n%10;
+      n/=10;
+   }
+   return sum;
+}
+int main(){
+   int result=0,arr[10001]={0};
+   for(int i=1;i<=10000;i++){
+      result=d(i);
+      if(result<10001){
+         arr[result]=1;
+      }
+   }
+   for(int i=1;i<=10000;i++){
+      if(arr[i]!=1){
+         printf("%d\n",i);
+      }
+   }
+
+   return 0;
+}
