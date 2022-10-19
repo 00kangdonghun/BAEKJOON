@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+int main(){
+   int N;
+   int a=1,b=1;
+   int i=1;
+   scanf("%d",&N);
+   if(N==1){
+      printf("%d\n",1);
+   }
+   else{
+      while(1){
+         a=a+6*(i-1);
+         b=b+6*i;
+         i++;
+         if((a<=N)&&(N<=b)){
+            printf("%d\n",i);
+            break;
+         }
+      }   
+   }
+
+   return 0;
+}
