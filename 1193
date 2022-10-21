@@ -1,0 +1,23 @@
+#pragma warning (disable: 4996)
+#include <stdio.h>
+#include <string.h>
+int main() {
+	int X, n = 1;
+	scanf("%d", &X);
+	while (1) {
+		if ((n - 1)*n / 2 < X&&X <= n * (n + 1) / 2) {
+			break;
+		}
+		n++;
+	}
+	if (n % 2 == 0) {
+		int a = n * (n + 1) / 2;
+		printf("%d/%d", n - (a - X), a - X + 1);
+	}
+	else {
+		int a = n * (n + 1) / 2;
+		printf("%d/%d", a - X + 1, n - (a - X));
+	}
+
+	return 0;
+}
