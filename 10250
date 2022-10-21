@@ -1,0 +1,19 @@
+#pragma warning (disable: 4996)
+#include <stdio.h>
+#include <string.h>
+int main() {
+	int T, H, W, N;
+	int cnt = 0;
+	scanf("%d",&T);
+	for (int i = 0; i < T; i++) {
+		scanf("%d %d %d", &H, &W, &N);
+		int cnt = 0;
+		while (N > 0) {
+			cnt++;
+			N -= H;
+		}
+		printf("%d\n", (N + H) * 100 + cnt);
+	}
+
+	return 0;
+}
