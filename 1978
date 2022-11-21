@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main(){
+   int N,n;
+   int result=0;
+   scanf("%d",&N);
+   for(int i=0;i<N;i++){
+      int cnt=0;
+      scanf("%d",&n);
+      for(int j=1;j<n;j++){
+         if(n%j==0){
+            cnt++;
+         }
+      }
+      if(cnt==1){
+         result++;
+      }
+   }
+   printf("%d\n",result);
+
+   return 0;
+}
