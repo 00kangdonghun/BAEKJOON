@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main() {
+   int n[5];
+   int sum=0,avg=0;
+   int mid=0;
+   for(int i=0;i<5;i++){
+      scanf("%d",&n[i]);
+   }
+   for(int i=0;i<5;i++){
+      sum+=n[i];
+   }
+   avg=sum/5;
+   for(int i=0;i<5;i++){
+      for(int j=0;j<4;j++){
+         if(n[j]>n[j+1]){
+            int tmp=n[j];
+            n[j]=n[j+1];
+            n[j+1]=tmp;
+         }
+      }
+   }
+   mid=n[2];
+   printf("%d\n",avg);
+   printf("%d\n",mid);
+
+
+
+
+   return 0;
+}
